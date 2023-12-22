@@ -1,0 +1,28 @@
+@import 'variables.scss';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.btn {
+    text-align: center;
+    border: none;
+    padding: 12px 1rem;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+.btn:hover {
+    cursor: pointer;
+}
+.next {
+    background-color: $Marine-blue;
+    color: $Alabaster;
+}
+.next:hover {
+    background-color: $Purplish-blue;
+}
+.go_back:hover {
+    color: $Purplish-blue;
+    font-weight: 700;
+}

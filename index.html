@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Multi-step form</title>
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <style>
+    .attribution { font-size: 14px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); text-decoration: none;}
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="sidebar">
+        <div class="steps">
+          <div class="step st1">1</div>
+          <div>
+            <div>STEP1</div>
+            <div>YOUR INFO</div>
+          </div>
+        </div>
+
+        <div class="steps">
+          <div class="step st2">2</div>
+          <div>
+            <div>STEP 2</div>
+            <div>SELECT PLAN</div>
+          </div>
+        </div>
+
+        <div class="steps">
+          <div class="step st3">3</div>
+          <div>
+            <div>STEP 3</div>
+            <div>ADD-ONS</div>
+          </div>
+        </div>
+
+        <div class="steps">
+          <div class="step st4">4</div>
+          <div>
+            <div>STEP 4</div>
+            <div>SUMMARY</div>
+          </div>
+        </div>
+    </div>
+
+    <article class="boxSteps">
+      <div class="box step_1">
+        <div class="text_info">
+          <div>Personal info</div>
+          <div>Please provide your name, email address, and phone number.</div>
+        </div>
+  
+        <div class="prsnl_info">
+          <div class="field">
+            <label for="name">
+              <span>Name</span>
+              <span class="err name_err"></span>
+              </label>
+            <input type="text" placeholder="e.g. Stephen King" id="name">
+          </div>
+  
+          <div class="field">
+            <label for="email">
+              <span>Email Address</span>
+              <span class="err email_err"></span>
+            </label>
+            <input type="email" placeholder="e.g. stephenking@lorem.com" id="email">
+          </div>
+  
+          <div class="field">
+            <label for="ph_no">
+              <span>Phone Number</span>
+              <span class="err phone_err"></span>
+            </label>
+            <input type="text" placeholder="e.g. +1 234 567 890" id="ph_no">
+          </div>
+        </div>
+  
+        <div class="btn_hold hold_1">
+          <button class="btn next" id="next_1">Next Step</button>
+        </div>
+      </div>
+  
+      <div class="box step_2 hidden">
+        <div class="text_info">
+          <div>Select your plan</div>
+          <div>  You have the option of monthly or yearly billing.</div>
+        </div>
+  
+        <div class="plans">
+          <div class="arcade plan">
+            <div class="plan_icon">
+              <img src="assets/images/icon-arcade.svg" alt="arcade">
+            </div>
+            <div>
+              <div>Arcade</div>
+              <div id="arcSub">$9/mo</div>
+              <div class="yr_offer_1 hide">2 months free</div>
+            </div>
+            
+          </div>
+
+          <div class="advanced plan">
+            <div class="plan_icon">
+              <img src="assets/images/icon-advanced.svg" alt="advanced">
+            </div>
+            
+            <div>
+              <div>Advanced</div>
+              <div id="advSub">$12/mo</div>
+              <div class="yr_offer_2 hide">2 months free</div>
+            </div>
+          </div>
+
+          <div class="pro plan">
+            <div class="plan_icon">
+              <img src="assets/images/icon-pro.svg" alt="pro">
+            </div>
+            <div>
+              <div>Pro</div>
+              <div id="proSub">$15/mo</div>
+              <div class="yr_offer_3 hide">2 months free</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="time_opt">
+          <span class = "monthly_sub">Monthly </span>
+          <article class="toggle">
+            <div class="choose_sub year_opt">
+              <div></div>
+            </div>
+            <div class="choose_sub month_opt hidden">
+              <div></div>
+            </div>
+          </article>
+          <span class ="yearly_sub">Yearly</span>
+        </div>
+
+        <div class="btn_hold holds">
+          <button class="btn go_back" id="back_1">Go Back</button>
+          <button class="btn next" id="next_2">Next Step</button>
+        </div>
+      </div>
+
+      <div class="box step_3 hidden">
+        <div class="text_info">
+          <div>Pick add-ons</div>
+          <div>Add-ons help enhance your gaming experience.</div>
+        </div>
+
+        <div class="addon_opts">
+          <div class="addons addon_1">
+            <div><Input type="checkbox" id="check_1"></div>
+            <div>
+              <div>Online service</div>
+              <div>Access to multiplayer games</div>
+            </div>
+            <div id="price_1">+$1/mo</div>
+          </div>
+
+          <div class="addons addon_2">
+            <div><Input type="checkbox" id="check_2"></div>
+            <div>
+              <div>Larger storage</div>
+              <div>Extra 1TB of cloud save</div>
+            </div>
+            <div id="price_2">+$2/mo</div>
+          </div>
+
+          <div class="addons addon_3">
+            <div><Input type="checkbox" id="check_3"></div>
+            <div>
+              <div>Customizable Profile</div>
+              <div>Custom theme on your profile</div>
+            </div>
+            <div id="price_3">+$2/mo</div>
+          </div>
+        </div>
+
+        <div class="btn_hold holds">
+          <button class="btn go_back" id="back_2">Go Back</button>
+          <button class="btn next" id="next_3">Next Step</button>
+        </div>
+      </div>
+
+      <div class="box step_4 hidden">
+        <div class="text_info">
+          <div>Finishing up</div>
+          <div>Double-check everything looks OK before confirming.</div>
+        </div>
+        <br/>
+   
+        <div class="render_summary"></div>
+        
+        <div class="btn_hold holds">
+          <button class="btn go_back" id="back_3">Go Back</button>
+          <button class="btn next" id="next_4">Confirm</button>
+        </div>
+      </div>
+      
+      <div class="box step_5 hidden">
+        <div>
+          <img src="assets/images/icon-thank-you.svg" alt="thank you">
+        </div>
+     
+        <div>
+          Thank you!
+        </div>
+        
+        <div>Thanks for confirming your subscription! We hope you have fun 
+  using our platform. If you ever need support, please feel free 
+  to email us at support@loremgaming.com.</div>
+      </div>
+    </article>
+  </div>
+  
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/Denzel-K">Denzel Kariuki</a>.
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
